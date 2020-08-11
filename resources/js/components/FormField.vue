@@ -14,12 +14,26 @@
 </template>
 
 <script>
+import Inputmask from "inputmask";
 import { FormField, HandlesValidationErrors } from 'laravel-nova'
 
 export default {
     mixins: [FormField, HandlesValidationErrors],
 
     props: ['resourceName', 'resourceId', 'field'],
+
+    mounted() {
+        Inputmask({
+            'alias': 'decimal',
+            'groupSeparator': '.',
+            'autoGroup': true,
+            'digits': 2,
+            'digitsOptional': false,
+            'placeholder': '0',
+            'prefix': 'IDR ',
+            'rightAlignNumerics': false
+        }).mask(this.$refs.input);
+    },
 
     methods: {
         /*

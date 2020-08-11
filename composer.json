@@ -1,5 +1,5 @@
 {
-    "name": "everestmx/nova-money-field",
+    "name": "andrewklau/nova-money-field",
     "description": "A Laravel Nova field.",
     "keywords": [
         "laravel",
@@ -8,8 +8,8 @@
     "license": "MIT",
     "require": {
         "php": ">=7.1.0",
-        "brick/money": "^0.3.3",
-        "symfony/intl": "^4.1"
+        "brick/money": "^0.4.2",
+        "symfony/intl": "^5.0"
     },
     "autoload": {
         "psr-4": {
@@ -26,6 +26,5 @@
     "config": {
         "sort-packages": true
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "minimum-stability": "dev"
 }
